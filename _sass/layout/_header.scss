@@ -1,0 +1,39 @@
+@import '../base/variables';
+
+.header {
+  & .page__name {
+    text-align: center;
+    display: block;
+    padding: 3px;
+
+    & .page__name__text {
+      position: relative;
+      margin: 0;
+      display: inline-block;
+      color: $text-color;
+      font-size: 2em;
+    }
+  }
+}
+
+
+@media (min-width: 640px) {
+  .header {
+    & .page__name {
+      & .page__name__text {
+        font-size: 2.5em;
+        padding: 20px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    & .page__name {
+      & .page__name__text {
+        font-size: 3em;
+      }
+    }
+  }
+}

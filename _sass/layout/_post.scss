@@ -1,0 +1,20 @@
+.post {
+  padding: 30px;
+
+  & .post__title {
+    margin: 0;
+    padding: 0 0 15px 0;
+  }
+
+  & > * {
+    opacity: 0;
+
+    &.animate {
+      opacity: 1;
+    }
+  }
+
+  & > .animate {
+    animation: fadeInUp .5s ease-in-out;
+  }
+}

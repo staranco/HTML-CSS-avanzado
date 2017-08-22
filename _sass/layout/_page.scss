@@ -1,0 +1,34 @@
+.page {
+  position: relative;
+
+  & .content {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    height: auto;
+    width: 100vw;
+    transition: width .3s cubic-bezier(0.22, 0.41, 0, 0.96);
+  }
+
+  &.resizeev .content {
+      width: calc(100vw - 50px);
+  }
+
+  @media (min-width: 640px) {
+    & .content {
+      overflow-y: auto;
+      height: 100vh;
+      top: 0;
+      width: calc(100vw - 230px)
+    }
+  }
+
+  @media (min-width: 1024px) {
+    & .content {
+      overflow-y: auto;
+      height: 100vh;
+      top: 0;
+      width: calc(100vw - 270px)
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<div class="sidebar">
+  <div id="header" class="header">
+      <a href="{{ site.url }}" class="page__name">
+        <h1 class="page__name__text page__name__text_l">HTML <small>&</small> CSS</h1>
+      </a>
+  </div>
+
+  <div id="menu" class="menu">
+    <ul class="menu__list">
+      {% for post in site.posts %}
+        <li class="menu__list__item">
+          <a href="{{ post.url }}" class="menu__list__item__link">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <a href="#" id="burger" class="burger">
+    <span class="burger__line burger__line_top"></span>
+    <span class="burger__line burger__line_middle"></span>
+    <span class="burger__line burger__line_bottom"></span>
+  </a>
+</div>
