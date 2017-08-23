@@ -9,7 +9,7 @@
     <ul class="menu__list">
       {% for post in site.posts %}
         <li class="menu__list__item">
-          <a href="{{ post.url }}" class="menu__list__item__link">{{ post.title }}</a>
+          <a href="{{ site.url }}/{{ post.url }}" class="menu__list__item__link">{{ post.title }}</a>
         </li>
       {% endfor %}
     </ul>
