@@ -2,7 +2,6 @@
 layout: home
 title:  "Aprende HTML y CSS avanzado"
 date:   2017-08-01 12:00:35 +0200
-categories: jekyll update
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget mi dignissim, pharetra mi id, finibus eros. Suspendisse potenti. Nam ullamcorper vulputate porttitor. Curabitur aliquam, quam ac mollis hendrerit, ante sem semper libero, vitae pellentesque quam nulla ut lacus. Aliquam sit amet urna pretium, dictum est at, sagittis nunc. In dictum pharetra sollicitudin. Sed ut nibh eu orci bibendum elementum. Nunc eget aliquam ante. Aliquam laoreet dictum ligula ut vulputate.
 
