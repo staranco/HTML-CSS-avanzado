@@ -1,0 +1,23 @@
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  z-index: 20;
+  background-image:
+    linear-gradient(
+      90deg, 
+      rgb(247, 149, 51) 0%, 
+      rgb(243, 112, 85) 50%, 
+      rgb(239, 78, 123) 100%
+    );
+  display: block;
+  transition: width .3s cubic-bezier(0.22, 0.41, 0, 0.96);
+}
+
+@media (min-width: 640px) {
+  .progress {
+    height: 4px;
+  }
+}

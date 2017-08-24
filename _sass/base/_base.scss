@@ -107,6 +107,22 @@ strong {
 
 ol, ul {
   list-style: none;
+
+  & li {
+    position: relative;
+    padding-left: 12px;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: block;
+      font-family: $icons-fontstack;
+      font-size: 10px;
+      content: '\f3a7';
+    }
+  }
 }
 
 //Code

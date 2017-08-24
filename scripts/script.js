@@ -2,6 +2,7 @@
 var page = document.getElementById('page');
 var burgerMenu = document.getElementById('burger');
 var menu = document.getElementById('menu');
+var progress = document.getElementById('progress');
 
 burgerMenu.addEventListener('click', function() {
   page.classList.toggle('resizeev');
@@ -35,4 +36,9 @@ content.addEventListener('scroll', function(){
   } else {
     burgerMenu.classList.remove('scrollev');
   }
+
+  if (getScroll > 5) {
+    progress.setAttribute("style","width:"+getScroll+"px");
+  }
 });
+
