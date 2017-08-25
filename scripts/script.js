@@ -37,8 +37,11 @@ content.addEventListener('scroll', function(){
     burgerMenu.classList.remove('scrollev');
   }
 
-  if (getScroll > 5) {
-    progress.setAttribute("style","width:"+getScroll+"px");
-  }
+  var height = content.scrollHeight;
+  var width = window.innerWidth;
+  var windowHeight = window.innerHeight;
+
+  var scrollProgress = (getScroll / (height - windowHeight)) * 100;
+  progress.setAttribute("style","width:" + scrollProgress + "%");
 });
 
