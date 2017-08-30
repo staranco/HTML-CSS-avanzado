@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Performance y organización"
+subtitle: "Tema 1"
 date:   2017-08-02 12:00:35 +0200
 ---
 Poseer un conocimiento avanzado de HTML y CSS nos permite entender la base de una web. Estos conocimientos son indispensables para comprender las necesidades tanto de desarrollo como de definición de la experiencia del usuario.
@@ -9,9 +10,9 @@ La organización de la arquitectura del código de un proyecto puede afectar fá
 
 ### Estrategia y estructura
 
-El primer paso para mejorar la respuesta de una página web o app radica en identificar una buena estrategia y estructura para desarrollar el código base. Un primer paso debería ser construir un directorio estructural, posteriormente resaltar los patrones de diseño y finalmente perseguir la creación de código reutilizable.
-
-#### Arquitectura
+El primer paso para mejorar la respuesta de una página web o app radica en identificar una buena estrategia y estructura para desarrollar el código base. Un primer paso debería ser construir un directorio estructural, posteriormente resaltar los patrones de diseño y finalmente perseguir la creación de código reutilizable.  
+  
+##### Arquitectura
 
 La manera en la que organicemos nuestras hojas de estilo reside puramente en preferencias personales, pero gerealmente hay una serie de directrices de buenas prácticas a seguir. Una de las más repetidas es la de separar los estilos en función de su propósito, lo que supone crear directorios, por ejemplo, para estilos de base, para componenetes de la interfaz, para elementos comunes etc.
 
@@ -39,11 +40,11 @@ Esta arquitectura aquí descrita incluye tres directorios, todos con sus respect
 
 El directorio "base" incluye estilos comunes y variables que serán usadas en toda la aplicación o sitio web: "**layout**" o "**typography**" por ejemplo. El directorio de "**componentes**" incluye los estilos que se emplearán en elementos específicos dentro de la interfaz, tales como "**alerts**", "**buttons**" o "**tables**". Por último, el directorio "**modules**" incluye los estilos para las diferentes secciones de una página, qeu están determinados por las necesidades específicas de cada aplicación o site.
 
-The component styles are purely interface driven and have nothing to do with the core business logic of the website. Modules then include styles specific to the business logic. When marking up a module in HTML it is common to use different user interface components within it. For example, the sidebar of a page may have list and button styles that are defined within component styles while other styles needed for the sidebar are inherited from the module style. The separation of style encourages well thought out presets and the ability for styles to be widely shared and reused.
+El estilo que aplicamos a los diversos componentes comprende, de este modo, estilos específicos que responden a las necesidades estilíticas de la web en concreto y estilos heredados del componente "genérico" en sí mismo. Por ejemplo los botones de una página web en concreto pueden ser de color rosa, los de otra tener los bordes redondeados... (estilos concretos) pero todos los botones deberían ser suficientemente amplios y estar distanciados del resto de elementos como para poder ser presionados sin entorpecer la navegación (estilos genéricos). Esta separación de estilos propicia que sean resusables y "compartibles" por la comunidad o entre proyectos dentro de una misma compañía. 
 
-The strategy of organizing styles this way isn’t exactly new, and has been previously mentioned in different CSS methodologies including Object Oriented CSS, OOCSS, and the Scalable and Modular Architecture for CSS, SMACSS. These methodologies have their own opinions on structure, as well as on how to use styles.
+Organizar los estilos siguiendo esta estrategia no es nueva y ha sido mencionada previamente en diversas metodologías CSS incluyendo [OOCSS](http://oocss.org/){:target="_blank"} (Object Oriented CSS), [BEM](http://getbem.com/){:target="_blank"} (Block, Element, Modifier) o [SMACS](https://smacss.com/){:target="_blank"} (Scalable and Modular Architecture for CSS). Se trata de metodologías que tienen su propia filosofía de estructuración y acerca de cómo usar los estilos. 
 
-#### Object Oriented CSS
+##### CSS orientado a objetos (OOCSS)
 
 La metodología [Object Oriented CSS](https://github.com/stubbornella/oocss){:target="_blank"} fue desarrollada por [Nicole Sullivan](http://www.stubbornella.org/content){:target="_blank"} en 2008 y se basa en dos principios básicos que contribuyen a construir sites y aplicaciones escalables con una arquitectura sólida:
 

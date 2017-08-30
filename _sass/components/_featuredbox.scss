@@ -1,0 +1,34 @@
+@import '../base/variables';
+.featuredbox {
+  position: relative;
+  display: block;
+  border-radius: 5px;
+  padding: 3px;
+  overflow: hidden;
+  background: linear-gradient(-135deg,#F37055 0%,#EF4E7B 52%,#A166AB 100%);
+  margin-bottom: 30px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  & .featuredbox__content {
+    border-radius: 5px;
+    padding: 30px;
+    background: white;
+    font-family: $secondary-fontstack;
+  }
+}
+
+.aside > *:nth-child(n+1).featuredbox {
+  background: linear-gradient(-135deg,#F37055 0%,#EF4E7B 52%,#A166AB 100%);
+}
+.aside > *:nth-child(n+2).featuredbox {
+  background: linear-gradient(-135deg,#F79533 0%,#F37055 51%,#EF4E7B 100%);
+}
+.aside > *:nth-child(n+3).featuredbox {
+  background: linear-gradient(135deg,#A166AB 0%,#5073B8 100%);
+}
+.aside > *:nth-child(n+4).featuredbox {
+  background: linear-gradient(135deg,#5073B8 0%,#13a793 36%,#07B39B 81%,#6DBA82 100%);
+}

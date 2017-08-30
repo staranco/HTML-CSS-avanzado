@@ -13,16 +13,16 @@ menu.addEventListener('click', function() {
 });
 
 //Animate post elements on enter
-var post = document.getElementById('post');
-var postChildren = post.children;
+var animated = document.getElementsByClassName('animated')[0];
+var animatedChildren = animated.children;
 
 function doSetTimeout(i) {
   setTimeout(function() {
-    postChildren[i].classList.add('animate')
+    animatedChildren[i].classList.add('animate')
   }, i * 100)
 }
 
-for (i = 0; i <= postChildren.length; i++) {
+for (i = 0; i <= animatedChildren.length; i++) {
     this.doSetTimeout(i)
 }
 
@@ -45,3 +45,22 @@ content.addEventListener('scroll', function(){
   progress.setAttribute("style","width:" + scrollProgress + "%");
 });
 
+//Truncate featuredbox text
+var featuredbox = document.getElementsByClassName('featuredbox');
+
+function truncate(string) {
+  if (string.length > 100) {
+    return string.substring(0, 100)+'...';
+  }
+  else {
+    return string;
+  }
+};
+
+for (i = 0; i <= featuredbox.length - 1; i++) {
+  var featuredboxContent = featuredbox[i].firstElementChild.children[0];
+  var featuredboxContentText = featuredboxContent.innerHTML;
+  var truncated = document.createTextNode(truncate(featuredboxContentText));
+
+  featuredbox[i].firstElementChild.replaceChild(truncated, featuredboxContent)
+}

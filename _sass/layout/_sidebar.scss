@@ -87,11 +87,10 @@
       }
 
       & .menu__list__item__link {
-        font-family: $secondary-fontstack;
         padding: 20px 50px 20px 40px;
         display: block;
         background: #fff;
-        transition: background .3s ease-in-out, padding 1s cubic-bezier(0.22, 0.41, 0, 0.96) .1s;
+        transition: background .3s ease-in-out;
 
         &::before {
           position: absolute;
@@ -105,9 +104,31 @@
           content: '\f3e6';
         }
 
+        & .menu__list__item__link__subtitle {
+          display: block;
+          font-size: 11px;
+          padding-left: 0;
+          transition: padding 1s cubic-bezier(0.22, 0.41, 0, 0.96) .1s;
+        }
+
+        & .menu__list__item__link__title {
+          display: block;
+          font-family: $secondary-fontstack;
+          color: $primary-color;
+          padding-left: 0;
+          transition: padding 1s cubic-bezier(0.22, 0.41, 0, 0.96);
+        }
+
         &:hover {
           background: #eee;
-          padding: 20px 50px 20px 45px;
+
+          & .menu__list__item__link__subtitle {
+            padding-left: 10px;
+          }
+
+          & .menu__list__item__link__title {
+            padding-left: 10px;
+          }
         }
       }
     }
@@ -281,7 +302,7 @@
     &:active .burger__line {
 
       &.burger__line_top {
-        transform: scaleX(1) translateY(8px) rotateZ(-150deg);
+        transform: scaleX(1) translateY(7px) rotateZ(-150deg);
         width: 10px;
       }
 
@@ -290,7 +311,7 @@
       }
 
       &.burger__line_bottom {
-        transform: scaleX(1) translateY(-8px) rotateZ(150deg);
+        transform: scaleX(1) translateY(-7px) rotateZ(150deg);
         width: 10px;
       }
     }

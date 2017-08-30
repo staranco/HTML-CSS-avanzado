@@ -6,9 +6,15 @@
   <div id="page" class="page">
     {% include sidebar.html %}
     <div id="content" class="content">
-      <div id="post" class="post">
-        <h2 class="post__title">{{page.title}}</h2>
-        {{content}}
+      <div class="home grid">
+        <div class="grid__column"> 
+          <div id="home__content" class="home__content animated"> 
+            <h1 class="home__title">{{page.title}}</h1>
+            <h4 class="home__title">{{page.subtitle}}</h4>
+            {{content}} 
+          </div>
+        </div>
+        <div class="grid__column"> {% include aside.html %} </div>
       </div>
     </div>
   </div>
