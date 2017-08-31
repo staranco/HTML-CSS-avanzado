@@ -5,3 +5,55 @@
 .display-block {
 	display: block !important;
 }
+
+.text-align-center {
+	text-align: center !important;
+}
+
+// Margins & Paddings
+$sizes: (
+  'n': '0',
+  'xxs': '2',
+  'xs': '5',
+  'sm': '10',
+  'md': '20',
+  'lg': '30',
+  'xl': '50',
+  'xxl': '80'
+);
+
+@each $sizeName, $size in $sizes {
+  .m-#{$sizeName} {
+    margin: #{$size}px !important;
+  }
+  .m-t-#{$sizeName} {
+    margin-top: #{$size}px !important;
+  }
+  .m-r-#{$sizeName} {
+    margin-right: #{$size}px !important;
+  }
+  .m-b-#{$sizeName} {
+    margin-bottom: #{$size}px !important;
+  }
+  .m-l-#{$sizeName} {
+    margin-left: #{$size}px !important;
+  }
+}
+
+@each $sizeName, $size in $sizes {
+  .p-#{$sizeName} {
+    padding: #{$size}px !important;
+  }
+  .p-t-#{$sizeName} {
+    padding-top: #{$size}px !important;
+  }
+  .p-r-#{$sizeName} {
+    padding-right: #{$size}px !important;
+  }
+  .p-b-#{$sizeName} {
+    padding-bottom: #{$size}px !important;
+  }
+  .p-l-#{$sizeName} {
+    padding-left: #{$size}px !important;
+  }
+}

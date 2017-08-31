@@ -107,7 +107,7 @@ strong {
 
 ul {
   list-style: none;
-
+  
   & li {
     position: relative;
     padding-left: 12px;
@@ -121,6 +121,22 @@ ul {
       font-family: $icons-fontstack;
       font-size: 10px;
       content: '\f3a7';
+    }
+  }
+
+  &.inline {
+    & li {
+      display: inline-block;
+    }
+  }
+
+  &.nobullets {
+    & li {
+    padding-left: 0;
+
+      &::before {
+        content: '';
+      }
     }
   }
 }
