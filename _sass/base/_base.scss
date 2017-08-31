@@ -105,7 +105,7 @@ strong {
   font-weight: 700;
 }
 
-ol, ul {
+ul {
   list-style: none;
 
   & li {
@@ -121,6 +121,58 @@ ol, ul {
       font-family: $icons-fontstack;
       font-size: 10px;
       content: '\f3a7';
+    }
+  }
+}
+
+ol {
+  counter-reset: li;
+  margin-left: 0;
+  padding: 20px;
+
+  &.columns {
+    columns: 2;
+  }
+
+  & li {
+    position: relative;
+    margin: 0 0 20px 0;
+    padding-left: 20px;
+    list-style: none;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: counter(li);
+      counter-increment: li;
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      z-index: 2;
+      transform: translateY(-50%);
+      display: block;
+      color: $text-color;
+      font-weight: 600;
+      font-size: 9px;
+      font-family: $secondary-fontstack;
+      text-align: center;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      z-index: 1;
+      display: block;
+      border-radius: 100%;
+      box-sizing: border-box;
+      width: 14px; 
+      height: 14px;
+      border: 1px solid $text-color;
+      transform: translateY(-50%);
     }
   }
 }
