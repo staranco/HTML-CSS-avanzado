@@ -1,0 +1,13 @@
+@import '../base/variables';
+.highlightedblock {
+  position: relative;
+  display: block;
+  border-radius: 5px;
+  padding: 20px;
+  overflow: hidden;
+  background: #fbfbfb;
+
+  &.bordered {
+    border: 1px solid #eee;
+  }
+}
