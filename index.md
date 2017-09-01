@@ -5,7 +5,7 @@ subtitle:  "Comprende el proceso de maquetación"
 date:   2017-08-01 12:00:35 +0200
 ---
 
-Conocer los conceptos de la maquetación web puede parecer a priori algo sencillo, pero dominar estas nociones en profundidad requiere acercarnos al diseño y desarrollo fornt end. No se trata sólamente de colocar elementos dentro de una web, sino de hacerlo de manera consciente, flexible y optimizada.
+Conocer los conceptos de la maquetación web puede parecer sencillo a priori, pero dominar estas nociones en profundidad requiere acercarnos al diseño y desarrollo fornt end. No se trata sólamente de colocar elementos dentro de una web, sino de hacerlo de manera consciente, flexible y optimizada.
 
 <ol>
 	{% for post in site.posts %}
@@ -23,6 +23,6 @@ Conocer los conceptos de la maquetación web puede parecer a priori algo sencill
 
 <div class="highlightedblock bordered">
 	<a href="#"><h3 class="m-t-n">Guía de HTML y CSS avanzado en PDF</h3></a>
-	<p>La guía está completamente libre para descarga bajo licencia Creative Commons y puedes hacer con ella lo que quieras: imprimirla, guardarla en tu ordenador, o dejarla en la carpeta de descargas hasta que vendas tu ordenador por wallapop para retirarte del mundo digital y montar un puesto de alcachofas orgánicas.</p> 
+	<p>La guía está completamente disponible para descarga bajo licencia Creative Commons y puedes hacer con ella lo que quieras: imprimirla, guardarla en tu ordenador, o dejarla en la carpeta de descargas hasta que vendas tu ordenador por wallapop para retirarte del mundo digital y montar un puesto de alcachofas orgánicas.</p> 
 	<p class="m-b-n">Esta Guía de HTML y CSS avanzado está creada con la única intención de proporcionar a todos los diseñadores gráficos, diseñadores web principiantes o curiosos digitales que quieran adentrarse un poco más en el mundo de la maquetación web.</p>
 </div>

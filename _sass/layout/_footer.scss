@@ -1,0 +1,25 @@
+@import '../base/variables';
+footer {
+	&.footer {
+		position: relative;
+		width: 100%;
+		padding: 20px;
+  		background: #fbfbfb;  
+		
+		& .footer__copyright {
+
+			& .footer__copyright__text {
+		  		font-family: $secondary-fontstack;
+		  	}
+		}
+
+		& .footer__social {
+
+			& .footer__social__list {
+				& .icon {
+					font-size: 24px;
+				}
+			}
+		}
+	}
+}

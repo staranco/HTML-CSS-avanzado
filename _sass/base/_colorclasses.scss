@@ -1,0 +1,21 @@
+@import 'colors';
+
+@each $color-name, $color in $colors {
+  @each $color-type, $color-value in $color {
+    @if $color-type == 'base' {
+      .#{$color-name}-bg {
+        background-color: $color-value !important;
+      }
+      .#{$color-name}-text {
+        color: $color-value !important;
+      }
+    } @else {
+      .#{$color-name}-bg-#{$color-type} {
+        background-color: $color-value !important;
+      }
+      .#{$color-name}-text-#{$color-type} {
+        color: $color-value !important;
+      }
+    }
+  }
+}

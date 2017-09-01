@@ -2,11 +2,11 @@
   position: relative;
 
   & .content {
-    position: absolute;
+    position: relative;
     right: 0;
     top: 50px;
     height: auto;
-    width: 100vw;
+    width: auto;
     transition: width .3s cubic-bezier(0.22, 0.41, 0, 0.96);
   }
 
@@ -16,8 +16,10 @@
 
   @media (min-width: 640px) {
     & .content {
+      position: absolute;
       overflow-y: auto;
       height: 100vh;
+      width: 100vw;
       top: 0;
       width: calc(100vw - 230px)
     }
@@ -28,7 +30,7 @@
       overflow-y: auto;
       height: 100vh;
       top: 0;
-      width: calc(100vw - 270px)
+      width: calc(100vw - 245px)
     }
   }
 }

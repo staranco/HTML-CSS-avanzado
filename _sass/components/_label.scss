@@ -1,0 +1,16 @@
+@import '../base/variables';
+.label {
+	position: relative;
+	display: block;
+	border-radius: 5px;
+	padding: 5px 10px;
+	overflow: hidden;
+	margin: 1px;
+	font-family: $secondary-fontstack;
+	font-size: 12px;
+
+	& span {
+		font-family: $secondary-fontstack;
+		font-size: 12px;
+	}
+}

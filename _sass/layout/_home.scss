@@ -1,5 +1,15 @@
 .home {
   padding: 30px;
+  
+  &.grid {
+    grid-template-columns: 1fr;
+  }
+  
+  @media (min-width: 1024px) {
+    &.grid {
+      grid-template-columns: 70% 30%;
+    }
+  }
 
   & .home__title {
     max-width: 420px;
