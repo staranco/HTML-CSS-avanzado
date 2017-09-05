@@ -111,16 +111,20 @@ ul {
   & li {
     position: relative;
     padding-left: 12px;
+    padding-bottom: 5px;
 
     &::before {
       position: absolute;
-      top: 50%;
+      top: 4px;
       left: 0;
-      transform: translateY(-50%);
       display: block;
       font-family: $icons-fontstack;
       font-size: 10px;
       content: '\f3a7';
+    }
+
+    &:last-child {
+      padding-bottom: 0;
     }
   }
 
@@ -201,4 +205,11 @@ code {
   padding: 20px 20px 20px 40px;
   font-family: monospace;
   box-shadow: 20px 0 0 0 #AAA inset;
+
+  &.inline {
+    display: inline-block;
+    padding: 2px 5px;
+    box-shadow: none;
+    font-size: 12px;
+  }
 }

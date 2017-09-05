@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "CSS Grid layout"
+title:  "Fundamentos de CSS Grid layout"
 subtitle: "Tema 7"
 date:   2017-08-28 12:00:35 +0200
 ---
@@ -35,3 +35,19 @@ Grid está soportado a mayo de 2017 por las últimas versiones de los navegadore
 		<li><span class="label deep-orange-bg">Opera mini <span class="brown-text">No</span></span></li>
 	</ul>
 </div>
+
+### Usando CSS Grid Layout
+
+Al principio puede resultar un poco complicado adecuarse al uso de este módulo debido a la gran cantidad de nuevas propiedades que nos brinda, pero precisamente por esta gran cantidad de posibilidades debe convertirse en un _must_ dentro de la maquetación css. 
+
+Conceptos fundamentales:
+- **Grid Container:** Es el contenedor al que se aplica la propiedad <code class="inline">display: grid</code>. Es el padre de los _grid items_.
+- **Grid Item:** Es cada uno de los hijos directos del _grid container_.
+- **Grid Cell:** Es una unidad individual de la cuadrícula, en terminología de tablas, sería una _celda_
+- **Grid Tracks:** Es el espacio que hay entre dos líneas de la cuadrícula. Podemos pensar en ellas como las _filas_ o _columnas_ de una tabla. 
+- **Grid Lines:**
+- **Grid Area:**
+
+Puedes familiarizarte con el uso de Grid con este pen:
+<p data-height="265" data-theme-id="dark" data-slug-hash="YxMEbK" data-default-tab="html,result" data-user="stsanchez" data-embed-version="2" data-pen-title="CSSGridLayout" class="codepen">See the Pen <a href="https://codepen.io/stsanchez/pen/YxMEbK/">CSSGridLayout</a> by STWhorf (<a href="https://codepen.io/stsanchez">@stsanchez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>

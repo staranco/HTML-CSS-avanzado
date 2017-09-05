@@ -4,14 +4,9 @@
   & .content {
     position: relative;
     right: 0;
-    top: 50px;
     height: auto;
     width: auto;
     transition: width .3s cubic-bezier(0.22, 0.41, 0, 0.96);
-  }
-
-  &.resizeev .content {
-      width: calc(100vw - 50px);
   }
 
   @media (min-width: 640px) {
@@ -22,6 +17,10 @@
       width: 100vw;
       top: 0;
       width: calc(100vw - 230px)
+    }
+
+    &.resizeev .content {
+        width: calc(100vw - 50px);
     }
   }
 
