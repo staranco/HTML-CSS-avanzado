@@ -23,3 +23,16 @@
     animation: fadeInUp .5s ease-in-out;
   }
 }
+
+@media (min-width: 1024px) {
+  .post {
+    padding: 30px;
+    max-width: 70%;
+  }
+
+  .fullwidth {
+    .post {
+      max-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.directory {
+	display: none;
+	position: fixed;
+	top: 150px;
+  	left: 75%;
+	padding: 0 40px;
+
+	& .directory__numberbullet {
+		position: absolute;
+		top: 30px;
+		left: 0;
+		transform: translateX(30%);
+		width: 50px;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+  		background: #fbfbfb;
+		font-family: $secondary-fontstack;
+  		font-size: 20px;
+  		color: #444;
+  		font-weight: 700;
+  		border-radius: 100%;
+  		border: 1px solid #eeeeee;
+	}
+
+	& .directory__content {
+		padding: 20px 20px 20px 40px;
+		border-left: 1px solid #eeeeee;
+		//border-radius: 5px;
+		//background: lighten($primary-color, 65%);
+
+		& .directory__title {
+			font-weight: 700;
+			font-size: 16px;
+			color: $primary-color;
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+
+@media (min-width: 1024px) {
+	.directory {
+		display: block;
+	}
+}

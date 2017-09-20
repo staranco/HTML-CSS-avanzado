@@ -45,8 +45,8 @@ Conceptos fundamentales:
 - **Grid Item:** Es cada uno de los hijos directos del _grid container_.
 - **Grid Cell:** Es una unidad individual de la cuadrícula, en terminología de tablas, sería una _celda_
 - **Grid Tracks:** Es el espacio que hay entre dos líneas de la cuadrícula. Podemos pensar en ellas como las _filas_ o _columnas_ de una tabla. 
-- **Grid Lines:**
-- **Grid Area:**
+- **Grid Lines:** Se trata de las líneas divisorias que demarcan la estructura de la _cuadrícula_. Pueden ser tanto horizontales como verticales.
+- **Grid Area:** Es el espacio encuadrado entre cuatro _grid lines_. Puede comprender todas las _grid cells_ que queramos.
 
 Puedes familiarizarte con el uso de Grid con este pen:
 <p data-height="265" data-theme-id="dark" data-slug-hash="YxMEbK" data-default-tab="html,result" data-user="stsanchez" data-embed-version="2" data-pen-title="CSSGridLayout" class="codepen">See the Pen <a href="https://codepen.io/stsanchez/pen/YxMEbK/">CSSGridLayout</a> by STWhorf (<a href="https://codepen.io/stsanchez">@stsanchez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
