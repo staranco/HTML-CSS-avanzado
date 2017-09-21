@@ -51,13 +51,57 @@ for (s = 0; s < pageSections.length; s++) {
 
 directoryContent.appendChild(ul);
 
+var position = window.pageYOffset;
+
+var getElemDistance = function ( elem ) {
+    var location = 0;
+    if (elem.offsetParent) {
+        do {
+            location += elem.offsetTop;
+            elem = elem.offsetParent;
+        } while (elem);
+    }
+    return location >= 0 ? location : 0;
+};
+
 var button = document.getElementsByClassName('scrollto');
 
-for (b = 0; b <= button.length; b++) {
-  button[b].addEventListener('click', function() {
-//******************************************************************************************************************************************TODO
+for (b = 0; b < button.length; b++) {
+  thisButton = button[b];
+  thisButton.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    var id = trimText('#', this.getAttribute('href'));
+    var target = document.getElementById(id)
+    var targetTop = getElemDistance(target);
+
+    scrollTo(content, targetTop - 20, 500);
   })
 }
+
+function scrollTo(element, to, duration) {
+    var start = element.scrollTop,
+        change = to - start,
+        currentTime = 0,
+        increment = 20;
+        
+    var animateScroll = function(){        
+        currentTime += increment;
+        var val = Math.easeInOutQuad(currentTime, start, change, duration);
+        element.scrollTop = val;
+        if(currentTime < duration) {
+            setTimeout(animateScroll, increment);
+        }
+    };
+    animateScroll();
+}
+
+Math.easeInOutQuad = function (t, b, c, d) {
+  t /= d/2;
+  if (t < 1) return c/2*t*t + b;
+  t--;
+  return -c/2 * (t*(t-2) - 1) + b;
+};
 
 //Get scroll position
 var progress = document.getElementById('progress');
