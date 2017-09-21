@@ -82,15 +82,15 @@ h3 {
 }
 
 h4 {
-  font-size: 1.4em;
-}
-
-h5 {
   font-size: 1.3em;
 }
 
-h6 {
+h5 {
   font-size: 1.2em;
+}
+
+h6 {
+  font-size: 1.1em;
 }
 
 p {
@@ -107,6 +107,17 @@ strong {
 
 ul {
   list-style: none;
+
+  &.columns {
+
+    &.columns-2 {
+      columns: 2;
+    }
+
+    &.columns-3 {
+      columns: 3;
+    }
+  }
   
   & li {
     position: relative;
@@ -151,9 +162,16 @@ ol {
   padding: 20px;
 
   &.columns {
-    columns: 2;
-  }
 
+    &.columns-2 {
+      columns: 2;
+    }
+
+    &.columns-3 {
+      columns: 3;
+    }
+  }
+  
   & li {
     position: relative;
     margin: 0 0 20px 0;
