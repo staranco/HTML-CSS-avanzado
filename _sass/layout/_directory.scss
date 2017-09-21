@@ -34,8 +34,29 @@
 			font-weight: 700;
 			font-size: 16px;
 			color: $primary-color;
-			margin: 0;
+			margin: 0 0 20px 0;
 			padding: 0;
+		}
+
+		& .directory__content__list {
+			& .directory__content__list__item { 
+				padding-left: 0;
+
+				&::before {
+					content: '';
+				}
+
+				& a.scrollto {
+					font-size: 12px;
+					padding: 3px 0;
+					display: block;
+					transition: .3s color ease-in-out;
+
+					&:hover {
+						color: rgb(239, 78, 123);
+					}
+				}
+			}
 		}
 	}
 }

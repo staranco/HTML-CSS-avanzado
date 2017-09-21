@@ -12,7 +12,7 @@ La organización de la arquitectura del código de un proyecto puede afectar fá
 
 El primer paso para mejorar la respuesta de una página web o app radica en identificar una buena estrategia y estructura para desarrollar el código base. Un primer paso debería ser construir un directorio estructural, posteriormente resaltar los patrones de diseño y finalmente perseguir la creación de código reutilizable.  
   
-##### Arquitectura
+#### Arquitectura
 
 La manera en la que organicemos nuestras hojas de estilo reside puramente en preferencias personales, pero gerealmente hay una serie de directrices de buenas prácticas a seguir. Una de las más repetidas es la de separar los estilos en función de su propósito, lo que supone crear directorios, por ejemplo, para estilos de base, para componenetes de la interfaz, para elementos comunes etc.
 
@@ -44,7 +44,7 @@ El estilo que aplicamos a los diversos componentes comprende, de este modo, esti
 
 Organizar los estilos siguiendo esta estrategia no es nueva y ha sido mencionada previamente en diversas metodologías CSS incluyendo [OOCSS](http://oocss.org/){:target="_blank"} (Object Oriented CSS), [BEM](http://getbem.com/){:target="_blank"} (Block, Element, Modifier) o [SMACS](https://smacss.com/){:target="_blank"} (Scalable and Modular Architecture for CSS). Se trata de metodologías que tienen su propia filosofía de estructuración y acerca de cómo usar los estilos. 
 
-##### CSS orientado a objetos (OOCSS)
+#### CSS orientado a objetos (OOCSS)
 
 La metodología [Object Oriented CSS](https://github.com/stubbornella/oocss){:target="_blank"} fue desarrollada por [Nicole Sullivan](http://www.stubbornella.org/content){:target="_blank"} en 2008 y se basa en dos principios básicos que contribuyen a construir sites y aplicaciones escalables con una arquitectura sólida:
 

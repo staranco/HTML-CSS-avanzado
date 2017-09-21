@@ -42,9 +42,11 @@ function trimText(text, string) {
 directoryNumber.innerHTML = trimText('Tema ', pageNumber);
 
 var ul = document.createElement('ul');
+ul.classList.add('directory__content__list');
 
 for (s = 0; s < pageSections.length; s++) {
   var li = document.createElement('li');
+  li.classList.add('directory__content__list__item');
   li.innerHTML = `<a href="#${pageSections[s].id}" class="scrollto">${pageSections[s].innerHTML}</a>`
   ul.appendChild(li);
 }
