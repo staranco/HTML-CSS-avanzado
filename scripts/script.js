@@ -1,8 +1,7 @@
+//TOGGLE BURGER MENU ON RESIZE
 var page = document.getElementById('page');
 var burgerMenu = document.getElementById('burger');
 var menu = document.getElementById('menu');
-
-//Toggle burger menu on resize
 burgerMenu.addEventListener('click', function() {
   page.classList.toggle('resizeev');
 });
@@ -11,7 +10,7 @@ menu.addEventListener('click', function() {
   page.classList.remove('resizeev');
 });
 
-//Animate post elements on enter
+//ANIMATE POSTS ELEMENTS ON ENTER
 var animated = document.getElementsByClassName('animated')[0];
 var animatedChildren = animated.children;
 
@@ -25,37 +24,38 @@ for (i = 0; i <= animatedChildren.length; i++) {
     this.doSetTimeout(i)
 }
 
-//Directory hacks
+//DIRECTORY HACKS
 var content = document.getElementById('content');
 var directory = document.getElementById('directory');
 var directoryContent = document.getElementsByClassName('directory__content')[0];
 var pageNumber = document.getElementById('post__subtitle').innerHTML;
 var directoryNumber = document.getElementsByClassName('directory__numberbullet')[0];
 var pageSections = document.getElementById('post').querySelectorAll('h3, h4');
+var button = document.getElementsByClassName('scrollto');
 
+//show or not show directory
 directory ? null : content.classList.add('fullwidth');
 
+//Title creation
 function trimText(text, string) {
   return string.replace(text, '')
 }
-
 directoryNumber.innerHTML = trimText('Tema ', pageNumber);
 
+//List creation
 var ul = document.createElement('ul');
 ul.classList.add('directory__content__list');
-
 for (s = 0; s < pageSections.length; s++) {
   var li = document.createElement('li');
   li.classList.add('directory__content__list__item');
   li.innerHTML = `<a href="#${pageSections[s].id}" class="scrollto">${pageSections[s].innerHTML}</a>`
   ul.appendChild(li);
 }
-
 directoryContent.appendChild(ul);
 
+//Get distance from top of an element
 var position = window.pageYOffset;
-
-var getElemDistance = function ( elem ) {
+var getElemDistance = function (elem) {
     var location = 0;
     if (elem.offsetParent) {
         do {
@@ -66,8 +66,32 @@ var getElemDistance = function ( elem ) {
     return location >= 0 ? location : 0;
 };
 
-var button = document.getElementsByClassName('scrollto');
+//Math easing function
+Math.easeInOutQuad = function (t, b, c, d) {
+  t /= d/2;
+  if (t < 1) return c/2*t*t + b;
+  t--;
+  return -c/2 * (t*(t-2) - 1) + b;
+};
 
+//ScrollTo target function
+function scrollTo(element, to, duration) {
+  var start = element.scrollTop,
+    change = to - start,
+    currentTime = 0,
+    increment = 20;
+  var animateScroll = function(){        
+    currentTime += increment;
+    var val = Math.easeInOutQuad(currentTime, start, change, duration);
+    element.scrollTop = val;
+    if(currentTime < duration) {
+        setTimeout(animateScroll, increment);
+    }
+  };
+  animateScroll();
+}
+
+//Target scroll onclick
 for (b = 0; b < button.length; b++) {
   thisButton = button[b];
   thisButton.addEventListener('click', function(e) {
@@ -81,31 +105,7 @@ for (b = 0; b < button.length; b++) {
   })
 }
 
-function scrollTo(element, to, duration) {
-    var start = element.scrollTop,
-        change = to - start,
-        currentTime = 0,
-        increment = 20;
-        
-    var animateScroll = function(){        
-        currentTime += increment;
-        var val = Math.easeInOutQuad(currentTime, start, change, duration);
-        element.scrollTop = val;
-        if(currentTime < duration) {
-            setTimeout(animateScroll, increment);
-        }
-    };
-    animateScroll();
-}
-
-Math.easeInOutQuad = function (t, b, c, d) {
-  t /= d/2;
-  if (t < 1) return c/2*t*t + b;
-  t--;
-  return -c/2 * (t*(t-2) - 1) + b;
-};
-
-//Get scroll position
+//PROGRESSBAR HACKS
 var progress = document.getElementById('progress');
 content.addEventListener('scroll', function(){
   var getScroll = this.scrollTop;
@@ -119,9 +119,10 @@ content.addEventListener('scroll', function(){
   progress.setAttribute("style","width:" + scrollProgress + "%");
 });
 
-//Truncate featuredbox text
+//FETUREDBOX HACKS
 var featuredbox = document.getElementsByClassName('featuredbox');
 
+//Truncate text
 function truncate(string) {
   if (string.length > 100) {
     return string.substring(0, 100)+'...';

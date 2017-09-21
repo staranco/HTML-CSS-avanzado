@@ -26,7 +26,9 @@ A continuación puedes comprobar la aplicación de las propiedades antes mencion
 <p data-height="265" data-theme-id="dark" data-slug-hash="veKpwL" data-default-tab="css,result" data-user="stsanchez" data-embed-version="2" data-pen-title="veKpwL" class="codepen">See the Pen <a href="https://codepen.io/stsanchez/pen/veKpwL/">veKpwL</a> by STWhorf (<a href="https://codepen.io/stsanchez">@stsanchez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-Es importante saber que no todas las propiedades CSS son transicionables. Para tener en cuenta las que sí lo son, a continuación peudes ver un listado:
+#### Propiedades transicionables
+
+Es importante saber que no todas las propiedades CSS son transicionables. Para tener en cuenta las que sí lo son, a continuación puedes ver un listado:
 
 <div class="highlightedblock bordered">
 	<ul class="columns columns-3 nobullets">
@@ -47,28 +49,48 @@ Es importante saber que no todas las propiedades CSS son transicionables. Para t
 		<li><a href="https://www.w3schools.com/css/css_margin.asp" target="_blank">margin</a></li>
 		<li><a href="https://www.w3schools.com/cssref/pr_dim_max-height.asp" target="_blank">max-height</a></li>
 		<li><a href="https://www.w3schools.com/cssref/pr_dim_max-width.asp" target="_blank">max-width</a></li>
-		<li><a href="" target="_blank">min-height</a></li>
-		<li><a href="" target="_blank">min-width</a></li>
-		<li><a href="" target="_blank">opacity</a></li>
-		<li><a href="" target="_blank">outline-color</a></li>
-		<li><a href="" target="_blank">outline-offset</a></li>
-		<li><a href="" target="_blank">outline-width</a></li>
-		<li><a href="" target="_blank">padding</a></li>
-		<li><a href="" target="_blank">right</a></li>
-		<li><a href="" target="_blank">text-indent</a></li>
-		<li><a href="" target="_blank">text-shadow</a></li>
-		<li><a href="" target="_blank">top</a></li>
-		<li><a href="" target="_blank">vertical-align</a></li>
-		<li><a href="" target="_blank">visibility</a></li>
-		<li><a href="" target="_blank">width</a></li>
-		<li><a href="" target="_blank">word-spacing</a></li>
-		<li><a href="" target="_blank">z-index</a></li>
+		<li><a href="https://www.w3schools.com/cssref/pr_dim_min-height.asp" target="_blank">min-height</a></li>
+		<li><a href="https://www.w3schools.com/cssref/pr_dim_min-width.asp" target="_blank">min-width</a></li>
+		<li><a href="https://www.w3schools.com/css/css_image_transparency.asp" target="_blank">opacity</a></li>
+		<li><a href="https://www.w3schools.com/cssref/pr_outline-color.asp" target="_blank">outline-color</a></li>
+		<li><a href="https://www.w3schools.com/cssref/css3_pr_outline-offset.asp" target="_blank">outline-offset</a></li>
+		<li><a href="https://www.w3schools.com/cssref/pr_outline-width.asp" target="_blank">outline-width</a></li>
+		<li><a href="https://www.w3schools.com/css/css_padding.asp" target="_blank">padding</a></li>
+		<li><a href="https://www.w3schools.com/cssref/pr_pos_right.asp" target="_blank">right</a></li>
+		<li><a href="https://www.w3schools.com/cssref/pr_text_text-indent.asp" target="_blank">text-indent</a></li>
+		<li><a href="https://www.w3schools.com/cssref/css3_pr_text-shadow.asp" target="_blank">text-shadow</a></li>
+		<li><a href="https://www.w3schools.com/cssref/pr_pos_top.asp" target="_blank">top</a></li>
+		<li><a href="https://www.w3schools.com/cssref/pr_pos_vertical-align.asp" target="_blank">vertical-align</a></li>
+		<li><a href="https://www.w3schools.com/cssref/pr_class_visibility.asp" target="_blank">visibility</a></li>
+		<li><a href="https://www.w3schools.com/cssref/pr_dim_width.asp" target="_blank">width</a></li>
+		<li><a href="https://www.w3schools.com/cssref/pr_text_word-spacing.asp" target="_blank">word-spacing</a></li>
+		<li><a href="https://www.w3schools.com/cssref/pr_pos_z-index.asp" target="_blank">z-index</a></li>
 	</ul>
 </div>
 
-#### Propiedades transicionables
-
 #### Duración de las transiciones
+
+La propiedad *transition-duration* nos permite especificar cuánto tardará en completarse una transición. De este modo podemos ajustar la velocidad de la transición para que el efecto sea rápido, lento o de una velocidad media.
+
+A *transition-duration* tenemos que pasarte un valor de tiempo, que puede estar expresado en segundos (s) o milisegundos (ms). Podemos expresar estos valores en forma de restultados fraccionarios (.3s por ejemplo). Cambiando el valor de *transition-duration* afectamos en la velocidad a la que irá nuestra transición, por descontado un valor más elevado corresponderá a una transición más lenta y viceversa. En caso de que queramos transicionar diferentes propiedades a diferentes velocidades, debemos declararlas separadas mediante comas. 
+
+Según el ejemplo anterior, la única propiedad qeu transicionaba era el color. En caso de que además quisiéramos que cambiara el tamaño de fuente, haríamos como en el siguiente ejemplo, en el que además del color, el tamaño del texto también sufrairá un cambio al pasar el mouse por encima del link. Es importante observar cómo las propiedades *color* y *font-size* están separadas por una coma y en *transition-delay* los tiempos también lo están, de manera que el primer valor (0.3s) afectará a la propiedad color, mientras que el segundo (0.2s) lo hará sobre el tamaño de texto:
+
+```
+.link {
+  color: pink;
+  font-size: 36px;
+  transition-property: color, font-size;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.3s, 0.2s;
+}
+
+.link:hover {
+  color: coral;
+  font-size: 48px;
+}
+```
 
 #### El tempo en las transiciones
 
