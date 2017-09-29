@@ -93,6 +93,16 @@ Según el ejemplo anterior, la única propiedad qeu transicionaba era el color. 
 ```
 
 #### El tempo en las transiciones
+Gracias a la propiedad *transition-timing-function* podemos controlar y modificar la aceleración de una animación - en qué punto de la animación aumenta o disminuye la velocidad - para aportar mayor realismo. Esta propiedad no afecta a la duración de la animación, pero puede afectar en cómo es percibida por el usuario. 
+
+Los valores más populares para esta propiedad son *linear*, *ease-in*, *ease-out* y *ease-in-out*. El valor *linear* indetifica una transición con una velocidad constante desde un estado a otro. El valor *ease-in* define una transición que empieza despacio y va incrementando su velocidad a medida que va avanzando. Del mismo modo, *ease-out* comienza deprisa y va disminuyendo la velocidad mientras finaliza. *Ease-in-out* identifica una transición que empieza despacio, hacia su mitad aumenta la velocidad, y finalmente acaba ralentizándose.
+
+En este pen podéis comprobar uno por uno los efectos en que resultan los valores anteriormente citados:
+
+<p data-height="265" data-theme-id="dark" data-slug-hash="yzMBLg" data-default-tab="css,result" data-user="stsanchez" data-embed-version="2" data-pen-title="Transition-timing-function example" class="codepen">See the Pen <a href="https://codepen.io/stsanchez/pen/yzMBLg/">Transition-timing-function example</a> by STWhorf (<a href="https://codepen.io/stsanchez">@stsanchez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+Cada uno de estos valores para *transition-timing-function* tiene una [cubic bezier](cubic-bezier.com){:target="_blank"} tras él. Además de estos valores predeterminados, podemos idear nosotros nuevos valores usando como valor *cubic-bezier(x1, y1, x2, y2)*. La curva de Bézier es muy común en editores de graficos, de audio... siempre está asociada a un efecto de curvatura suave y progresiva. En css la curva de bézier es la magia "behind the scene" de las timing functions: básicamente describe el patrón de aceleración en forma de gráfico. [En este link](http://cubic-bezier.com){:target="_blank"} puedes jugar con los controles y crear tus propias curvas para entender mejor esta función.
+
 
 #### Demora en las transiciones
 

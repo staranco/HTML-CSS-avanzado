@@ -1,7 +1,7 @@
 .directory {
 	display: none;
 	position: fixed;
-	top: 150px;
+  	top: 50px;
   	left: 75%;
 	padding: 0 40px;
 
@@ -27,8 +27,6 @@
 	& .directory__content {
 		padding: 20px 20px 20px 40px;
 		border-left: 1px solid #eeeeee;
-		//border-radius: 5px;
-		//background: lighten($primary-color, 65%);
 
 		& .directory__title {
 			font-weight: 700;
