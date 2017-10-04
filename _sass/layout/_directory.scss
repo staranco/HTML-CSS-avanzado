@@ -62,5 +62,9 @@
 @media (min-width: 1024px) {
 	.directory {
 		display: block;
+	
+		&:not(.directory__content__list__item a.scrollto) {
+			pointer-events: none;
+		}
 	}
 }
