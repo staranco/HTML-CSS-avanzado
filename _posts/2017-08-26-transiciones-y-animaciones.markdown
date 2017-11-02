@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Transiciones y animaciones"
-subtitle: "Tema 8"
-date:   2017-08-27 12:00:35 +0200
+subtitle: "Tema 7"
+date:   2017-08-26 12:00:35 +0200
 ---
 
 Todos sabemos que Internet es un medio hiperpotente capaz de proveernos de todo tipo de información en multiples formas y vías. La variedad y la cantidad proporcionan riqueza, pero a los creadores de contenidos nos obliga a idear formas de diferenciarnos del resto. Las animaciones web son una forma de atraer la atención del usuario. 
@@ -101,7 +101,13 @@ En este pen podéis comprobar uno por uno los efectos en que resultan los valore
 
 <p data-height="265" data-theme-id="dark" data-slug-hash="yzMBLg" data-default-tab="css,result" data-user="stsanchez" data-embed-version="2" data-pen-title="Transition-timing-function example" class="codepen">See the Pen <a href="https://codepen.io/stsanchez/pen/yzMBLg/">Transition-timing-function example</a> by STWhorf (<a href="https://codepen.io/stsanchez">@stsanchez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
-Cada uno de estos valores para *transition-timing-function* tiene una [cubic bezier](cubic-bezier.com){:target="_blank"} tras él. Además de estos valores predeterminados, podemos idear nosotros nuevos valores usando como valor *cubic-bezier(x1, y1, x2, y2)*. La curva de Bézier es muy común en editores de graficos, de audio... siempre está asociada a un efecto de curvatura suave y progresiva. En css la curva de bézier es la magia "behind the scene" de las timing functions: básicamente describe el patrón de aceleración en forma de gráfico. [En este link](http://cubic-bezier.com){:target="_blank"} puedes jugar con los controles y crear tus propias curvas para entender mejor esta función.
+Cada uno de estos valores para *transition-timing-function* tiene una [cubic bezier](cubic-bezier.com){:target="_blank"} tras él. Además de estos valores predeterminados, podemos idear nosotros nuevos valores usando como valor *cubic-bezier(x1, y1, x2, y2)*, donde:
+- x1 es la primera coordenada del eje X
+- y1 es la primera coordenada del eje Y
+- x2 es la segunda coordenada del eje X
+- y2 es la segunda coordenada del eje Y
+
+La curva de Bézier es muy común en editores de graficos, de audio... siempre está asociada a un efecto de curvatura suave y progresiva. En css la curva de bézier es la magia "behind the scene" de las timing functions: básicamente describe el patrón de aceleración en forma de gráfico. [En este link](http://cubic-bezier.com){:target="_blank"} puedes jugar con los controles y crear tus propias curvas para entender mejor esta función.
 
 
 #### Demora en las transiciones

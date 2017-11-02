@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Fundamentos de CSS Grid layout"
-subtitle: "Tema 7"
-date:   2017-08-28 12:00:35 +0200
+subtitle: "Tema 4"
+date:   2017-08-29 12:00:35 +0200
 ---
 
 Al principio de todo, usábamos tablas, luego comenzamos a usar floats, porcentajes y posicionamiento inline-block. Sin embargo todos estos recursos no eran sino parches que trataban de enmendar grandes carencias funcionales de versiones anteriores de CSS, el lenguaje para maquetación por excelencia que, sin embargo, distaba mucho de cumplir todas nuestras necesidades. 
@@ -56,8 +56,10 @@ Puedes familiarizarte con el uso de <code class="inline">display: grid</code> co
 <p data-height="265" data-theme-id="dark" data-slug-hash="YxMEbK" data-default-tab="html,result" data-user="stsanchez" data-embed-version="2" data-pen-title="CSSGridLayout" class="codepen">See the Pen <a href="https://codepen.io/stsanchez/pen/YxMEbK/">CSSGridLayout</a> by STWhorf (<a href="https://codepen.io/stsanchez">@stsanchez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-#### Nuevas Unidades Especiales y la función *repeat()*
-Con CSS grid nos llega una nueva unidad: **fr**, que es el equivalente a *fracción*. Vemos además que a la propiedad *grid-template-columns* le hemos asociado la funcion <code class="inline">repeat(3, 1fr)</code>, que hará que se repita 3 veces el valor que resulta de dividir la anchura total de la pantalla entre 3, de manera qeu si redimensionamos la pantalla, la anchura de cada módulo seguirá adaptándose al no tratarse de medidas absolutas, sino fracciones relativas al contenedor que las envuelve. 
+#### Nuevas unidades y la función *repeat()*
+Con CSS grid nos llega una nueva unidad: **fr**, que es el equivalente a *fracción*. Vemos que, al aplicarle esta unidad a la medida de las columnas en *grid-template-columns*, la anchura de cada una será el resultado de dividir la anchura total del contenedor entre las columnas que haya, de manera que si redimensionamos la pantalla la anchura de cada módulo seguirá adaptándose al no tratarse de medidas absolutas, sino fracciones relativas al contenedor que las envuelve.
+
+Asímismo, vemos que a la propiedad *grid-template-columns* le hemos asociado la funcion <code class="inline">repeat(3, 1fr)</code>, que hará que se repita 3 veces el valor que hemos elegido: *1fr*. 
 
 <p data-height="265" data-theme-id="dark" data-slug-hash="ZXayvB" data-default-tab="html,result" data-user="stsanchez" data-embed-version="2" data-pen-title="CSSGridLayout - Fr Units" class="codepen">See the Pen <a href="https://codepen.io/stsanchez/pen/ZXayvB/">CSSGridLayout - Fr Units</a> by STWhorf (<a href="https://codepen.io/stsanchez">@stsanchez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
@@ -75,5 +77,54 @@ En cuanto a la ordenación índividual de los elementos, podemos lograrla con la
 
 <p data-height="265" data-theme-id="dark" data-slug-hash="qPVjvy" data-default-tab="html,result" data-user="stsanchez" data-embed-version="2" data-pen-title="CSSGridLayout - Element placement" class="codepen">See the Pen <a href="https://codepen.io/stsanchez/pen/qPVjvy/">CSSGridLayout - Element placement</a> by STWhorf (<a href="https://codepen.io/stsanchez">@stsanchez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+#### Posicionando los elementos en CSS Grid
+CSS Grid Layout nos proporciona la posibilidad de posicionar los elementos de la grid en función de números de línea y columna. Al tratarse de una cuadrícula, un contenedor <code class="inline">display: grid</code> siempre estará compuesto de líneas horizontales y verticales. En nuestro sistema occidental de lectura de izquierda a derecha, la primera línea, con posición 1, estará a la izquierda del todo, y la última, con posición -1, a la derecha (al revés en los sistemas de escritura de derecha a izquierda.) En el siguiente ejemplo podemos encontrar una grid de 4 columnas y 3 filas, como indica el código de <code class="inline">grid-template-columns: repeat(4, 1fr)</code>, pero hemos hecho que el primer ítem ocupe 4 espacios forzando su punto de inicio y su punto de fin con el código <code class="inline">grid-column-start: 1</code> y <code class="inline">grid-column-end: -1</code>, de manera que el ítem se adaptará a todo lo ancho de la grid, mientras que el resto de ítems seguirán alineándose por sí mismos y seguirán ocupando el *1fr* que le dijimos en primera instancia. 
+
+<p data-height="265" data-theme-id="dark" data-slug-hash="pWQobj" data-default-tab="html,result" data-user="stsanchez" data-embed-version="2" data-pen-title="CSSGridLayout - item alignment" class="codepen">See the Pen <a href="https://codepen.io/stsanchez/pen/pWQobj/">CSSGridLayout - item alignment</a> by STWhorf (<a href="https://codepen.io/stsanchez">@stsanchez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+#### Definiendo áreas en CSS Grid
+Por si fueran pocos todos estos términos y funcionalidades 🙄, no podemos dejar de hablar de uno de los conceptos más útiles de CSS Grid: los *template áreas*. 
+
+Cuando definimos nuestra grid, podemos proporcionarle nombres a las áreas principales para identificarlas mejor. Lo haremos usando la propiedad *grid-template-areas*.
+
+```
+.header {
+  grid-area: header;
+}
+
+.menu {
+  grid-area: menu;
+}
+
+.content {
+  grid-area: content;
+}
+
+.directory {
+  grid-area: directory;
+}
+
+.footer {
+  grid-area: footer;
+}
+```
+
+Esta característica puede ser muy útil cuando trabajamos con media queries, ya que al tratarse de una propiedad tan semántica (podemos darle el nombre que nosotros queramos y CSS Grid se le asignará automáticamente) es muy fácil localizar, distribuir y jugar con los elementos que se alojan dentro de cada área: 
+
+```
+.wrapper {
+	display: grid;
+	grid-template-columns: 200px 40px auto 40px 200px;
+	grid-template-rows: auto auto auto;
+	grid-template-areas: 
+		". header ."
+		". menu ."
+		"content . directory";
+		". footer ."
+}	
+```
+En el siguiente ejemplo puedes ver una muestra en funcionamiento del comportamiento de *grid-template-areas* en combinación con media queries, no hemos embebido el pen para que lo visualicéis a pantalla completa: [ejemplo](https://codepen.io/stsanchez/pen/pWQobj){:target="_blank"}
 
 Además de estos pequeños pens que hemos ido linkando a cada sección, puedes ver en [Grid by Example de Rachel Andrew](https://gridbyexample.com/examples/){:target="_blank"} un compendio mucho más profuso y detallado de casos y ejemplos de uso de CSS Grid Layout (en inglés).

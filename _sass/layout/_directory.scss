@@ -1,8 +1,8 @@
 .directory {
 	display: none;
 	position: fixed;
-  	top: 50px;
-  	left: 75%;
+  top: 50px;
+  left: 75%;
 	padding: 0 40px;
 
 	& .directory__numberbullet {
@@ -36,7 +36,7 @@
 		}
 
 		& .directory__content__list {
-			& .directory__content__list__item { 
+			& .directory__content__list__item {
 				padding-left: 0;
 
 				&::before {
@@ -49,8 +49,18 @@
 					display: block;
 					transition: .3s color ease-in-out;
 
+					& em {
+						font-size: 12px;
+						color: $primary-color;
+						transition: .3s color ease-in-out;
+					}
+
 					&:hover {
 						color: rgb(239, 78, 123);
+
+						& em {
+							color: rgb(239, 78, 123);
+						}
 					}
 				}
 			}
@@ -62,7 +72,7 @@
 @media (min-width: 1024px) {
 	.directory {
 		display: block;
-	
+
 		&:not(.directory__content__list__item a.scrollto) {
 			pointer-events: none;
 		}

@@ -2,7 +2,7 @@
 layout: post
 title:  "Performance y organización"
 subtitle: "Tema 1"
-date:   2017-08-30 12:00:35 +0200
+date:   2017-09-01 12:00:35 +0200
 ---
 Poseer un conocimiento avanzado de HTML y CSS nos permite entender la base de una web. Estos conocimientos son indispensables para comprender las necesidades tanto de desarrollo como de definición de la experiencia del usuario.
 

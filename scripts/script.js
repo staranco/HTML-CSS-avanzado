@@ -1,4 +1,5 @@
-//TOGGLE BURGER MENU ON RESIZE
+//MENU HACKS
+//Toggle Burger menu on resize
 var page = document.getElementById('page');
 var burgerMenu = document.getElementById('burger');
 var menu = document.getElementById('menu');
@@ -10,6 +11,57 @@ menu.addEventListener('click', function() {
   page.classList.remove('resizeev');
 });
 
+//Show next prev menu elements
+var menuList = document.getElementsByClassName('menu__list')[0];
+var menuItems = [];
+for (i = 0; i < menuList.children.length; i++) {
+  menuItems.push(menuList.children[i])
+}
+
+var menuShowedItems = menuItems.slice(0, 5);
+for (j = 0; j < menuShowedItems.length; j++) {
+  menuShowedItems[j].classList.add('show');
+}
+
+function sliceArray(array, first, last) {
+  array.slice(first, last);
+  for (j = 0; j < array.length; j++) {
+    array[j].classList.add('show');
+  }
+}
+
+var k = 0;
+console.log(k, k + 4)
+function nextItem(){
+  k = k + 4;
+  console.log(k, k+4);
+  sliceArray(menuItems, k, k+4)
+  return(k)
+}
+function prevItem(){
+  (k > 0) ? (k = k - 4) : (k = 0);
+  console.log(k, k+4)
+  sliceArray(menuItems, k, k+4)
+}
+
+var prevButton = document.getElementById('prev_button');
+var nextButton = document.getElementById('next_button');
+var items = menuList.children;
+prevButton.addEventListener("click", function(e) {
+  console.log(items)
+  for (i = 0; i < items.length; i ++) {
+    items[i].classList.remove('show');
+  }
+  prevItem()
+})
+nextButton.addEventListener("click", function(e) {
+    console.log(items)
+  for (i = 0; i < items.length; i ++) {
+    items[i].classList.remove('show');
+  }
+  nextItem()
+})
+
 //ANIMATE POSTS ELEMENTS ON ENTER
 var animated = document.getElementsByClassName('animated')[0];
 var animatedChildren = animated.children;
@@ -20,7 +72,7 @@ function doSetTimeout(i) {
   }, i * 100)
 }
 
-for (i = 0; i <= animatedChildren.length; i++) {
+for (i = 0; i < animatedChildren.length; i++) {
     this.doSetTimeout(i)
 }
 
@@ -80,7 +132,7 @@ function scrollTo(element, to, duration) {
     change = to - start,
     currentTime = 0,
     increment = 20;
-  var animateScroll = function(){        
+  var animateScroll = function(){
     currentTime += increment;
     var val = Math.easeInOutQuad(currentTime, start, change, duration);
     element.scrollTop = val;
