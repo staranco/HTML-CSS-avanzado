@@ -40,7 +40,13 @@
   background: #fff;
   transform: translateX(-102%);
   transition: transform .3s cubic-bezier(0.22, 0.41, 0, 0.96);
-
+  
+  /* temporary */
+  & #prev_button, 
+  & #next_button {
+    text-align: center;
+  }
+  
   & .menu__scroll {
     position: relative;
     height: calc(100vh - 400px);
