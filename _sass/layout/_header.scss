@@ -14,7 +14,7 @@
   transition: transform .3s cubic-bezier(0.22, 0.41, 0, 0.96), z-index 0s ease-in-out;
   background: white;
 
-  & .page__name {opacity: 0;
+  & .page__name {
     margin: 0 auto;
     text-align: center;
     display: block;
