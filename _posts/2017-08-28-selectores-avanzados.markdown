@@ -4,7 +4,7 @@ title:  "Selectores avanzados"
 subtitle: "Tema 5"
 date:   2017-08-28 12:00:35 +0200
 ---
-https://learn.shayhowe.com/advanced-html-css/complex-selectors/
+<!--https://learn.shayhowe.com/advanced-html-css/complex-selectors/
 
 - [Teacher] In HTML, an attribute is used to provide additional information such as the location of an image file in an image tag or to define characteristics of an element such as different form input types. They usually follow the format of attribute name equals the value, contained in single or double quotes. The values may very depending on the attribute and there are also some exceptions where the attribute can be used with or without a value. There are two attributes that are commonly associated with CSS, ids and classes.
 
@@ -24,4 +24,4 @@ Because I have my URL listed in both lines 12 and 13, this style will now be app
 
 This could be useful for selecting multiple elements which use the same attribute and prefix value. In this example, all the shared styles can be added using this attribute selector. On the flip side, adding a dollar sign before the equal sign will match the attribute values that end with a particular string. This could be useful for selecting specific file types. If you want to learn more about advanced selectors in general, check out this article. Some of these selectors, we've talked about, but some of them, we haven't.
 
-You might not memorize them all, as the title suggests, but it's a good resource that I myself have referred to many times over the years. I suggest scanning through the list, just to become familiar with what options are available.
+You might not memorize them all, as the title suggests, but it's a good resource that I myself have referred to many times over the years. I suggest scanning through the list, just to become familiar with what options are available.-->
