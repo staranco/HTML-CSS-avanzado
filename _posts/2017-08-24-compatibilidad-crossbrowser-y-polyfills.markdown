@@ -6,7 +6,7 @@ date:   2017-08-24 12:00:35 +0200
 ---
 
 ###Retina y dispositivos de alta densidad
-- [Instructor] Designing and developing websites have changed as more screen sizes are introduced into the market. When Apple introduced their Retina Display, that also changed how we developed websites. Retina Display is a term trademarked by Apple, and is used to describe their high-pixel density screens. Apple introduced the Retina Display in 2010 with their iPhone 4, and later in 2012, it was incorporated into their iPad 3, MacBook Pro, and iMac. Now all of Apple's products have Retina Display except the MacBook Air.
+<!-- [Instructor] Designing and developing websites have changed as more screen sizes are introduced into the market. When Apple introduced their Retina Display, that also changed how we developed websites. Retina Display is a term trademarked by Apple, and is used to describe their high-pixel density screens. Apple introduced the Retina Display in 2010 with their iPhone 4, and later in 2012, it was incorporated into their iPad 3, MacBook Pro, and iMac. Now all of Apple's products have Retina Display except the MacBook Air.
 
 Before we get into more detail about Retina Displays, let's talk a little bit more about pixels. Each pixel is basically a small square, which contains its own brightness level and color. Together, the pixels are combined to make a graphic. Pixel density refers to how many pixels are contained within a space, usually measured by pixels per inches, PPI, or sometimes referred to as dots per inch, DPI. Retina Displays have double the number of pixels per inch, so in this example, the Retina Display can fit two pixels within the same width and the same height of a non-Retina Display.
 
@@ -67,5 +67,5 @@ The more pixels there are within the same area, the smaller the pixels are, whic
 
 My monitor is actually twice the physical size of my laptop display, but because the monitor is not a Retina Display, the number of pixels is equal among both screens. After Retina Displays were introduced, other manufacturers also began to offer high pixel density screens. There aren't always double the amount of pixels, but to be considered high-density, there are at least 1.5 times more the amount of PPI. Some products even have more than double the amount. High-density pixel screens are becoming more common, so supporting it where we can in our website designs will improve the experience for people using these displays, and will not affect those not using high-density pixel screens.
 
-One area of web development that is most affected by high pixel density screens are images, specifically raster-based images. We'll be talking more about image file types in an upcoming lesson.
+One area of web development that is most affected by high pixel density screens are images, specifically raster-based images. We'll be talking more about image file types in an upcoming lesson.-->
 ###
