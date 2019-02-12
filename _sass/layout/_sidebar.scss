@@ -128,7 +128,7 @@
     transform: translateX(0);
 }
 
-.burger {opacity: 0;
+.burger {
   position: fixed;
   top: 3px;
   left: 3px;
@@ -224,6 +224,7 @@
   }
 
   .burger {
+    opacity: 0;
     top: 50%;
     left: 180px;
     padding: 15px 15px calc(100vh - 50vh) 15px;
