@@ -4,7 +4,7 @@ title:  "Diseño Responsive"
 subtitle: "Tema 2"
 date:   2017-08-31 12:00:35 +0200
 ---
-https://learn.shayhowe.com/advanced-html-css/responsive-web-design/
+<!--https://learn.shayhowe.com/advanced-html-css/responsive-web-design/
 
 - [Instructor] In the previous lesson, we talked about responsive typography and used media queries to change the font sizes, but when we go from one breakpoint to another, there is an abruptive switch from one size to the other. This isn't necessarily a bad thing, we can assume that most people don't view websites by resizing the browser the way we do when we're testing our webpages. However, there is a way to create fluid typography using viewport units. There are four viewport units. Vw represents the viewport width.
 
@@ -20,4 +20,4 @@ The difference is, with 4vmax, it will take the value of the larger side. You ca
 
 So now, all of your relative rem units will be relative to a fluid unit so this means, I won't need to use the media query declaration anymore. The font size will now scale up or down based on the size of the viewport rather than specific breakpoints. I can still use media queries for a specific overrides. I can use a pixel value to override the relative value, since pixel is always fixed. So let's say for example, I always want my foot note to be 16 pixels.
 
-By adding it here, it won't be effected by the other relative or fluid units. Using viewport units alone comes with some drawbacks. You don't get precise control over the sizes like you do with other units. Check out this article on Smashing Magazine for more details about using viewport units as well as more advanced features like the calc expression to create min and max font sizes to control the rate of the scale of your viewport units.
+By adding it here, it won't be effected by the other relative or fluid units. Using viewport units alone comes with some drawbacks. You don't get precise control over the sizes like you do with other units. Check out this article on Smashing Magazine for more details about using viewport units as well as more advanced features like the calc expression to create min and max font sizes to control the rate of the scale of your viewport units.-->
