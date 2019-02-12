@@ -156,6 +156,21 @@ ul {
   }
 }
 
+@media (max-width: 768px) {
+  ul {
+    &.columns {
+
+      &.columns-2 {
+        columns: 1;
+      }
+
+      &.columns-3 {
+        columns: 1;
+      }
+    }
+  }
+}
+
 ol {
   counter-reset: li;
   margin-left: 0;
